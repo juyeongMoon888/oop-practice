@@ -1,4 +1,4 @@
-package org.inheritance;
+package org.inheritance.study01;
 
 public class CarMain {
     public static void main(String[] args) {
