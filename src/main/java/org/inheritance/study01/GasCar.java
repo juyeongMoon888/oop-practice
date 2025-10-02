@@ -1,4 +1,4 @@
-package org.inheritance;
+package org.inheritance.study01;
 
 public class GasCar extends Car {
     public void fillUp() {
