@@ -15,10 +15,10 @@ class C extends B {
     protected int d, e;
 }
 ```
-(1) A objA = new objA();에 의해 생성되는 객체 objA의 멤버들을 모두 나열하라. // private int a; public 
-<br/>(2) B objB = new objB();에 의해 생성된느 객체 objB의 멤버들을 모두 나열하라. // a, b, c
-<br/>(3) C objC = new objC();에 의해 생성되는 객체 objC의 멤버들을 모두 나열하라. // a, b, c, d, e
-<br/>(4) 클래스 D를 다음과 같이 작성하였을 때, 오류가 발생하는 라인을 모두 찾아라. // ① - a는 private 으로 자신 외 접근불가
+(1) A objA = new objA();에 의해 생성되는 객체 objA의 멤버들을 모두 나열하라.
+<br/>(2) B objB = new objB();에 의해 생성된느 객체 objB의 멤버들을 모두 나열하라.
+<br/>(3) C objC = new objC();에 의해 생성되는 객체 objC의 멤버들을 모두 나열하라. 
+<br/>(4) 클래스 D를 다음과 같이 작성하였을 때, 오류가 발생하는 라인을 모두 찾아라.
 ```java
 class D extends C {
     public void f() {
