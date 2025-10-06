@@ -24,7 +24,7 @@ public class Example {
 <br> B클래스로 가서 B(int x) 생성자를 호출하고 상속받은 A로가서 기본 생성자를 호출한다. 
 <br> A클래스에서 기본 생성자를 실행하고 B로 리턴해서 B(int x)생성자를 실행한다. 
 
-출처: Java 명품 Programming (p.281)
+출처: Java 명품 Programming (p.316)
 <br>
 <br>
 </span>
