@@ -87,3 +87,17 @@ public static void main(String[] args) {
     System.out.println(str + "입니다.");
 }
 ```
+Point를 상속받아 색을 가진 점을 나타내는 ColorPoint2 클래스를 작성하라. 다음 main() 메소드를 포함하여 실행 결과와 같이 출력되게 하라. 
+```java
+public static void main(String[] args) {
+    ColorPoint2 zeroPoint = new ColorPoint2(); // (0,0) 위치의 "WHITE" 색 점
+    System.out.println(zeroPoint.toString() + "입니다.");
+
+    ColorPoint2 cp = new ColorPoint2(10, 10, "RED");
+    cp.set("BLUE");
+    cp.set(10, 20);
+    System.out.println(cp.string() + "입니다.");
+    ColorPoint2 threshouldPoint = new ColorPoint2(100, 100); //100, 100위치의 "BLACK" 점
+    System.out.println("cp에서 임계점까지의 거리는 " + cp.getDistance(threshouldPoint));
+}
+```
