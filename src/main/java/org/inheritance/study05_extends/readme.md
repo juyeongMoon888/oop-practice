@@ -151,3 +151,59 @@ public class Point3D extends Point{
     }
 }
 ```
+
+***
+Point 클래스를 상속받아 양수만 가능한 점을 나타내는 PositivePoint 클래스를 작성하라. 다음 main() 메소드를 포함하여 실행 결과와 같이 출력되게 하라.
+```java
+public static void main(String[] args) {
+    PositivePoint p = new PositivePoint(10, 10); // (10, 10)의 점
+    p.move(5, 5); // p는 (5, 5)점
+    System.out.println(p.toString() + "입니다.");
+
+    p.move(2, -2); // 점 p는 양수 공간만 가능. 그러므로 이동 없음
+    System.out.println(p.toString() + "입니다.");
+
+    PositivePoint q = new PositivePoint(-10, -10); //음수 점 불가. 디폴트(1, 1)의 점 생성
+
+    System.out.println(p.toString() + "입니다.");
+}
+```
+실행결과
+```java
+(5,5)의 점입니다.
+(5,5)의 점입니다.
+(1,1)의 점입니다.
+```
+문제풀이
+```java
+public class PositivePoint extends Point{
+    public PositivePoint(int x, int y) {
+        super(Math.max(1, x), Math.max(1, y));
+    }
+
+    @Override
+    public void move(int x, int y) {
+        if (x > 0 && y > 0) {
+            super.move(x, y);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "("+super.getX()+","+super.getY()+")의 점";
+    }
+}
+```
+해설
+<br>Point는 일반 좌표, PositivePoint는 “양수만”이라는 강화된 불변성을 가진다. 따라서 판별/보정은 서브클래스 쪽에서 하고 super(...)에는 보정된 값을 넘기는게 깔끔하다. 
+```java
+super(Math.max(1, x), Math.max(1, y));
+```
+Math.max(a, b)는 두 값 중 더 큰 값을 돌려준다.
+<br>그래서 Math.max(1, x)는 x가 1미만이면 1, 1이상이면 x그대로를 반환한다. 즉 x를 최소 1로 보정하는 효과가 있다. 즉, 이 한 줄로 (x, y)가 **항상 (≥1, ≥1)**이 되도록 만든 뒤 부모 생성자를 호출한다.
+<br>
+<br>
+출처: Java 명품 Programming (p.323)
+<br>
+<br>
+</span>

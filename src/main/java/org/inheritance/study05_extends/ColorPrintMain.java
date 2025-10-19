@@ -20,7 +20,7 @@ public class ColorPrintMain {
         ColorPoint2 thresholdPoint = new ColorPoint2(100, 100); //(100, 100) 위치의 "BLACK"점
         System.out.println("cp에서 임계점까지의 거리는 " + cp.getDistance(thresholdPoint));
     }*/
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Point3D p = new Point3D(3, 2, 1);
         System.out.println(p.toString() + "입니다.");
 
@@ -32,7 +32,18 @@ public class ColorPrintMain {
         System.out.println(p.toString() + "입니다.");
         p.move(100, 200, 300);
         System.out.println(p.toString() + "입니다.");
+    }*/
+    public static void main(String[] args) {
+        PositivePoint p = new PositivePoint(10, 10); // (10, 10)의 점
+        p.move(5, 5); // p는 (5, 5)점
+        System.out.println(p.toString() + "입니다.");
 
+        p.move(2, -2); // 점 p는 양수 공간만 가능. 그러므로 이동 없음
+        System.out.println(p.toString() + "입니다.");
+
+        PositivePoint q = new PositivePoint(-10, -10); //음수 점 불가. 디폴트(1, 1)의 점 생성
+
+        System.out.println(q.toString() + "입니다.");
     }
 
 
