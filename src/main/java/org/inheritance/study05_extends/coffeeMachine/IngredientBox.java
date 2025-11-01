@@ -1,8 +1,10 @@
 package org.inheritance.study05_extends.coffeeMachine;
 
 public class IngredientBox extends Box{
+    private String name;
     public IngredientBox(String name, int size) {
-        // 생성자
+        super(size);
+        this.name = name;
     }
 
     @Override
@@ -12,6 +14,6 @@ public class IngredientBox extends Box{
 
     @Override
     public void print() {
-
+        super.getSize();
     }
 }
